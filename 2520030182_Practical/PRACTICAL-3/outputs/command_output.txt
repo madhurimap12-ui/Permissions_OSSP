@@ -1,0 +1,21 @@
+output
+
+
+lenovo@DESKTOP-EP68BV6:~$ nano processid.c
+lenovo@DESKTOP-EP68BV6:~$ gcc processid.c
+lenovo@DESKTOP-EP68BV6:~$ ./a.out
+Parent Process
+PID: 1138
+PPID: 1039
+Child PID: 1139
+State: Running
+Child Process
+PID: 1139
+PPID: 1138
+State: Running
+Child finished
+Child completed
+lenovo@DESKTOP-EP68BV6:~$
+
+
+
