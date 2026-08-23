@@ -1,0 +1,12 @@
+total 112
+-rw-r--r--  1 kasturi  staff    214 Aug 23 20:19 Makefile
+drwxr-xr-x  3 kasturi  staff     96 Aug 23 20:20 outputs
+-rwxr-xr-x  1 kasturi  staff  49736 Aug 23 20:20 process_demo
+drwxr-xr-x  2 kasturi  staff     64 Aug 23 20:16 screenshots
+drwxr-xr-x  3 kasturi  staff     96 Aug 23 20:19 src
+Parent process started.
+Parent PID: 7643
+
+Parent waiting for child...
+Child process completed.
+Parent process exiting.
