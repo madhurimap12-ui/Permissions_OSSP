@@ -1,0 +1,22 @@
+output
+
+
+lenovo@DESKTOP-EP68BV6:~$ nano skill1.c
+lenovo@DESKTOP-EP68BV6:~$ gcc skill1.c
+lenovo@DESKTOP-EP68BV6:~$ ./a.out
+Child Process
+Parent Process
+Child PID: 2416
+Parent PID: 2415
+Parent PID: 2415
+Executing ls command...
+Child PID: 2416
+ A3     MyProgram           abc    ex1       f6        grep.c.save   open3.c          pipesort.c    skill1.c
+ A6    'OSSP assignments'   b1     exec1.c   f7        home.c        permission_lab   private.txt   student_portal
+ A8     Permissions_OSSP    b2     exec2.c   f8        linux_task1   pipe1.c          processid.c   task1.c
+ A9     Practical           dir2   exec3.c   f9        linux_task2   pipe2.c          program.c     xyz
+ C1     Z8                  dir5   f1        fi        linux_task4   pipe2.c.save     public.txt    z7
+ C1.c   a.out               dir6   f1.c      fork1.c   mvex.c        pipeex1.c        readwr.c
+ M      a4                  dirz   f3        fork2.c   open1.c       pipeex2.c        script.txt
+Child process completed
+lenovo@DESKTOP-EP68BV6:~$
