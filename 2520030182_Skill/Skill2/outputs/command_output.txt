@@ -1,0 +1,15 @@
+output
+
+lenovo@DESKTOP-EP68BV6:~$ nano skill2.c
+lenovo@DESKTOP-EP68BV6:~$ gcc skill2.c
+lenovo@DESKTOP-EP68BV6:~$ ./a.out
+mysh> hello
+hello
+You entered: hello
+mysh> hie
+hie
+You entered: hie
+mysh> hi0
+hi0
+You entered: hi0
+mysh>
