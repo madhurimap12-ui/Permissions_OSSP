@@ -1,0 +1,103 @@
+PRACTICAL 2 - REPRESENTATIVE STRACE OUTPUT
+
+Command:
+strace cat sample.txt
+
+NOTE:
+The following is a representative Linux strace output.
+It was prepared because strace is not available in the current macOS
+environment. Exact addresses, library paths, buffer sizes, and system
+call details may vary between Linux distributions.
+
+Representative output:
+
+execve("/usr/bin/cat", ["cat", "sample.txt"], 0x7ffd...) = 0
+
+brk(NULL)                               = 0x55...
+arch_prctl(ARCH_SET_FS, 0x7f...)        = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE,
+     MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)  = 0x7f...
+
+openat(AT_FDCWD, "sample.txt", O_RDONLY) = 3
+
+read(3, "This is Practical 2 system call demonstration.\n",
+     131072) = 47
+
+write(1, "This is Practical 2 system call demonstration.\n",
+      47) = 47
+
+read(3, "", 131072) = 0
+
+close(3) = 0
+
+close(1) = 0
+close(2) = 0
+
+exit_group(0) = ?
+
+Analysis:
+
+1. execve()
+   Loads and starts the cat program.
+
+2. openat()
+   Opens sample.txt in read-only mode.
+   The kernel creates/returns a file descriptor for the file.
+
+3. read()
+   Reads the contents of sample.txt from the file system into the
+   process buffer.
+
+4. write()
+   Writes the contents to file descriptor 1, which represents standard
+   output (the terminal).
+
+5. read() returning 0
+   Indicates that the end of the file has been reached.
+
+6. close()
+   Releases the file descriptor and associated kernel resources.
+
+7. exit_group()
+   Terminates the process and returns control to the shell.
+
+Important Kernel Services:
+
+execve()      -> Process/program execution
+openat()      -> File system and file descriptor management
+read()        -> File input
+write()       -> Terminal/output handling
+close()       -> Resource cleanup
+exit_group()  -> Process termination
+
+User Space to Kernel Space:
+
+The cat program executes in user space. When it requests services such
+as opening or reading a file, it invokes system calls. The CPU transfers
+control to the kernel, where the requested operation is performed.
+After the operation is completed, control and the result are returned
+to the user-space process.
+
+Typical sequence:
+
+User Space
+    |
+    | execve()
+    v
+Kernel Space
+    |
+    | openat()
+    v
+File System
+    |
+    | read()
+    v
+Kernel Space
+    |
+    | write()
+    v
+Terminal
+    |
+    | close()
+    v
+Process termination

@@ -1,0 +1,5 @@
+=== Practical 2 File Copy Output ===
+File copied successfully from sample.txt to copied.txt
+
+=== Copied File Contents ===
+This is Practical 2 system call demonstration.
