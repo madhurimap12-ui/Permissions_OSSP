@@ -1,0 +1,86 @@
+PRACTICAL 3
+
+Title:
+Interactive Input Loop with Keyboard Input Handling
+
+Objective:
+To create an interactive main loop that displays a prompt, captures keyboard 
+input, handles backspace and Enter keys, manages an input buffer, supports 
+multi-character commands, and terminates when an exit command is entered.
+
+Program:
+interactive_loop.c
+
+Key Features:
+1. Displays an interactive prompt.
+2. Reads keyboard input character by character.
+3. Stores characters in an input buffer.
+4. Supports multi-character commands.
+5. Handles the Backspace key.
+6. Processes the Enter key.
+7. Recognizes "exit" and "quit" as exit commands.
+8. Repeats the interaction until an exit condition occurs.
+
+System Calls Used:
+read() - Reads one character from standard input.
+write() - Writes characters to standard output.
+
+Control Flow:
+Start
+  |
+Display Prompt
+  |
+Read Character
+  |
+  +---- Backspace ----> Remove Previous Character
+  |
+  +---- Enter --------> Process Command
+  |                         |
+  |                         +---- exit/quit ----> End
+  |                         |
+  |                         +---- other command -> Display Command
+  |
+  +---- Normal Character -> Store in Buffer
+  |
+Repeat
+
+Conclusion:
+The interactive input loop successfully captures keyboard input, manages the 
+input buffer, supports backspace and Enter processing, handles multi-character 
+commands, and terminates when an exit command is entered.
+
+
+CONTROL FLOW DIAGRAM:
+
+START
+  |
+  v
+Display Prompt
+  |
+  v
+Read Character
+  |
+  v
+Is Character Backspace?
+  |             |
+ Yes            No
+  |             |
+  v             v
+Remove       Is Character Enter?
+Character      |          |
+  |           Yes         No
+  |            |           |
+  |            v           v
+  |       Process Command  Store Character
+  |            |           |
+  |            v           |
+  |       Is exit/quit?    |
+  |          |      |      |
+  |         Yes     No     |
+  |          |       |     |
+  |          v       v     |
+  |         END   Display  |
+  |               Command  |
+  |                  |     |
+  |                  v     |
+  └─────── Prompt <┘

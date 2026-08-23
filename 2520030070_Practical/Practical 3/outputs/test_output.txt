@@ -1,0 +1,18 @@
+Practical 3 - Interactive Input Loop Test
+
+Test 1: Normal input
+my-shell> hello
+Command entered: hello
+
+Test 2: Multi-character command
+my-shell> open file
+Command entered: open file
+
+Test 3: Backspace handling
+my-shell> helllo
+my-shell> hello
+Command entered: hello
+
+Test 4: Exit condition
+my-shell> exit
+Exiting interactive loop...
