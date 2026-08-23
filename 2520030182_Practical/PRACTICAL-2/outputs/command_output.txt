@@ -1,0 +1,10 @@
+output.txt
+
+lenovo@DESKTOP-EP68BV6:~$ nano fork2.c
+lenovo@DESKTOP-EP68BV6:~$ gcc fork2.c
+lenovo@DESKTOP-EP68BV6:~$ ./a.out
+File copied successfully
+lenovo@DESKTOP-EP68BV6:~$
+
+
+
