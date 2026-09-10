@@ -1,0 +1,6 @@
+Chid 1 pid=4296
+Chid 2 pid=4297
+Chid 3 pid=4298
+Parent collected Child 1
+Parent collected Child 2
+Parent collected Child 3

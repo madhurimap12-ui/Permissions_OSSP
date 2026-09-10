@@ -1,0 +1,119 @@
+PRACTICAL 4
+
+Title:
+
+Process Management Using fork(), wait(), and waitpid()
+
+Objective:
+
+To understand process creation and process management in UNIX/Linux using
+fork(), wait(), and waitpid() system calls. To create child processes,
+observe their execution, and demonstrate how the parent process waits for
+and collects terminated child processes.
+
+Programs:
+
+1. waitex.c
+2. zombie.c
+3. multipezombie.c
+
+Key Features:
+
+1. Creates child processes using fork().
+
+2. Displays process IDs of parent and child processes.
+
+3. Uses wait() to make the parent wait for child processes.
+
+4. Uses waitpid() to wait for a specific child process.
+
+5. Demonstrates parent-child process execution.
+
+6. Demonstrates collection of terminated child processes.
+
+7. Creates multiple child processes using a loop.
+
+System Calls Used:
+
+fork() - Creates a new child process.
+
+wait() - Makes the parent process wait for a child process to complete.
+
+waitpid() - Makes the parent wait for a specific child process.
+
+getpid() - Returns the process ID of the current process.
+
+sleep() - Suspends process execution for a specified time.
+
+exit() - Terminates the calling process.
+
+Control Flow:
+
+Start
+
+ |
+
+Create Child Process using fork()
+
+ |
+
+ +---- Child Process ----> Display Child PID
+ |                         |
+ |                         v
+ |                       Exit
+ |
+ +---- Parent Process ---> Wait for Child
+                           |
+                           v
+                    Child Completed
+                           |
+                           v
+                         End
+
+
+Conclusion:
+
+The programs successfully demonstrate process creation and process
+management using fork(), wait(), and waitpid(). The parent process
+successfully waits for child processes and collects their termination
+status. Multiple child processes are also created and managed
+successfully.
+
+
+CONTROL FLOW DIAGRAM:
+
+START
+
+  |
+
+  v
+
+Create Child using fork()
+
+  |
+
+  +-------------------+
+
+  |                   |
+
+ Child                Parent
+
+  |                   |
+
+Display PID       Wait for Child
+
+  |                   |
+
+Exit              Child Completed
+
+                      |
+
+                      v
+
+                 Collect Child
+
+                      |
+
+                      v
+
+                     END
