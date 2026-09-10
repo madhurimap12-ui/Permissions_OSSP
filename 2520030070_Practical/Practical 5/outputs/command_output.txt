@@ -1,0 +1,53 @@
+Program 1: Producer-Consumer Communication Using Anonymous Pipe
+
+Producer
+Produced 10
+Produced 20
+Produced 30
+Produced 40
+Produced 50
+Consumer
+Consumed 10
+Consumed 20
+Consumed 30
+Consumed 40
+Consumed 50
+Communication time is 0.000303
+Communication Efficiency is 16501.650165
+
+Program 2: ls -l | grep ".c"
+
+-rw-r--r--   1 kasturi  staff   1558 Sep 10 11:28 CommuEfficency.c
+-rw-r--r--   1 kasturi  staff    980 Sep 10 09:38 client.c
+-rw-r--r--   1 kasturi  staff     64 Aug 12 12:16 execexp1.c
+-rw-r--r--   1 kasturi  staff     60 Aug 12 12:21 execexp2.c
+-rw-r--r--   1 kasturi  staff    136 Aug 12 12:38 execexp3.c
+-rw-r--r--   1 kasturi  staff    292 Aug  5 19:52 fork.c
+-rw-r--r--   1 kasturi  staff    386 Aug  6 09:23 fork4.c
+-rw-r--r--   1 kasturi  staff    121 Aug  5 23:33 getpid.c
+-rw-r--r--   1 kasturi  staff    173 Aug  5 23:44 getppid.c
+-rw-r--r--   1 kasturi  staff    400 Sep 10 11:58 ls_grep.c
+-rw-r--r--   1 kasturi  staff      0 Sep  9 11:39 multipezombie.c
+-rw-r--r--   1 kasturi  staff    240 Aug  6 09:12 mvex.c
+-rw-r--r--   1 kasturi  staff    222 Aug 12 10:56 pipeex1.c
+-rw-r--r--   1 kasturi  staff    278 Aug 12 11:05 pipeex2.c
+-rw-r--r--   1 kasturi  staff    685 Aug 26 14:13 pipeipc.c
+-rw-r--r--   1 kasturi  staff    862 Aug 27 08:49 pipeipc1.c
+-rw-r--r--   1 kasturi  staff      1 Aug 12 12:39 pipepac1.c
+-rw-r--r--   1 kasturi  staff    281 Aug 12 11:41 pipepc1.c
+-rw-r--r--   1 kasturi  staff    361 Aug 12 13:43 pipex1.c
+-rw-r--r--   1 kasturi  staff    366 Aug 12 13:59 pipex2.c
+-rw-r--r--   1 kasturi  staff    356 Aug 12 14:07 pipex3.c
+-rw-r--r--   1 kasturi  staff    438 Sep  9 11:38 producer.c
+-rw-r--r--   1 kasturi  staff    512 Aug 27 09:49 receiver.c
+-rw-r--r--   1 kasturi  staff    675 Aug 27 09:38 sender.c
+-rw-r--r--   1 kasturi  staff    935 Sep 10 09:37 server.c
+-rw-r--r--   1 kasturi  staff    936 Sep 10 09:30 service.c
+-rw-r--r--   1 kasturi  staff    331 Sep  2 13:55 shm.c
+-rw-r--r--   1 kasturi  staff    407 Sep  2 20:12 shm1.c
+-rw-r--r--   1 kasturi  staff    287 Sep  2 11:04 sigint.c
+-rw-r--r--   1 kasturi  staff   1624 Sep  2 11:20 signal1.c
+-rw-r--r--   1 kasturi  staff    135 Sep  2 11:06 sleepint.c
+-rw-r--r--   1 kasturi  staff    857 Sep  9 11:43 waitex.c
+-rw-r-xr-x   1 kasturi  staff    224 Aug  6 09:43 z8.c
+-rw-r--r--   1 kasturi  staff    368 Sep  9 11:41 zombie.c
