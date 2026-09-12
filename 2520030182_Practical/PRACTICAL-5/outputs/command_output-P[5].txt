@@ -1,0 +1,12 @@
+Producer
+Produced 10
+Produced 20
+Produced 30
+Produced 40
+Consumed 10
+Produced 50
+Consumed 20
+Consumed 30
+Consumed 40
+Consumed 50
+Communication time is 0.000000
