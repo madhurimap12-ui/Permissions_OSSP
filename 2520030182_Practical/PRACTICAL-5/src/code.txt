@@ -1,0 +1,38 @@
+#include<stdio.h>//print f
+#include<unistd.h>//pid
+#include<sys/wait.h>//wait()
+#include<stdlib.h>//exit(0)
+#include<time.h>//for clock system call
+int main() {
+int fd[2];// since pipe has 2 ends read end write end
+pipe(fd);//creating file descripter
+int data;//variable that writes data to pipe
+int start,end;//clock time start and end
+double CommunicationEfficiency;
+double timetaken;//variable use to calculate communication
+start=clock();//storing start time
+int pid;//process id
+pid=fork();//fork created
+if(pid==0){//child process is consumer
+for(int i=0;i<5;i++){// creating 5 processes
+read(fd[0],&data,sizeof(data));//reading the data
+printf("Consumed %d \n",data);
+}
+close(fd[0]);//read end closed
+}
+else{//this is parent producer sends data
+close(fd[0]);//producer doent read data so closing
+printf("Producer \n");
+for(int i=1;i<=5;i++){//creating 5
+data=i*10;
+write(fd[1],&data,sizeof(data));//data written
+printf("Produced %d\n",data);
+}
+close(fd[1]);//closing write end of pipe
+wait(NULL);// wait untill comunication is done
+end=clock();
+timetaken=(end-start)/CLOCKS_PER_SEC;
+printf("Communication time is %lf",timetaken);
+CommunicationEfficiency=5/timetaken;
+}
+}
