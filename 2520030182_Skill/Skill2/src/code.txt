@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+
+int main(){
+char input[100];
+char ch;
+int i=0;
+
+while(1){
+printf("mysh> ");
+fflush(stdout);
+i=0;
+
+while(1){
+read(0,&ch,1);
+
+if(ch=='\n'){
+input[i]='\0';
+printf("\n");
+break;
+}
+
+if(ch==127){
+if(i>0){
+i--;
+printf("\b \b");
+}
+continue;
+}
+
+if(i<99){
+input[i++]=ch;
+printf("%c",ch);
+}
+}
+
+if(strcmp(input,"exit")==0){
+printf("Exiting...\n");
+break;
+}
+
+printf("You entered: %s\n",input);
+}
+
+return 0;
+}
